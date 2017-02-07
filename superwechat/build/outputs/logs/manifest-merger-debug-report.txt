@@ -22,6 +22,7 @@ ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:8:5-11:59
 MERGED from [com.android.support:multidex:1.0.1] D:\workplace\superwechat\superwechat\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
 MERGED from [superwechat:redpacketlibrary:unspecified] D:\workplace\superwechat\superwechat\build\intermediates\exploded-aar\superwechat\redpacketlibrary\unspecified\AndroidManifest.xml:7:5-9:41
 MERGED from [superwechat:EaseUI:unspecified] D:\workplace\superwechat\superwechat\build\intermediates\exploded-aar\superwechat\EaseUI\unspecified\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:23.0.1] D:\workplace\superwechat\superwechat\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
 	tools:overrideLibrary
 		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:11:9-56
 	android:targetSdkVersion
@@ -138,6 +139,7 @@ ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:47:5-90
 		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:47:22-87
 application
 ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:49:5-500:19
+MERGED from [com.android.support:appcompat-v7:23.0.1] D:\workplace\superwechat\superwechat\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:53:9-41
 	android:allowBackup
