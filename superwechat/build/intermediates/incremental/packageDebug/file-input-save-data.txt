@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Feb 07 20:52:16 CST 2017
+#Tue Feb 07 21:59:30 CST 2017
 100.set=ANDROID_RESOURCE
 57.file=D\:\\workplace\\superwechat\\superwechat\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\jars\\2\\1f\\main.jar\\assets\\icon_markd_l.png
 145.file=D\:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\em_icon_mute_on.png
