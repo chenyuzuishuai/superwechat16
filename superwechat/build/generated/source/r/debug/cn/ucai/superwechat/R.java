@@ -4324,6 +4324,7 @@ containing a value of this type.
         public static final int money_username_format=0x7f0701e6;
         public static final int move_out_backlist=0x7f0700e9;
         public static final int move_up_to_cancel=0x7f0700ea;
+        public static final int msg_1=0x7f0702c7;
         public static final int msg_choose_few_person_red_packet=0x7f0701e7;
         public static final int msg_error_page_hint=0x7f0701e8;
         public static final int msg_error_retry=0x7f0701e9;
@@ -4357,7 +4358,7 @@ containing a value of this type.
         public static final int nickname_description=0x7f0700f2;
         public static final int no_call_data=0x7f0701fe;
         public static final int no_more_messages=0x7f0700f3;
-        public static final int no_msg=0x7f0702c7;
+        public static final int no_msg=0x7f0702c8;
         public static final int no_network_connected=0x7f0701ff;
         public static final int no_pwd_msg=0x7f070200;
         public static final int no_verify=0x7f070201;
@@ -4367,7 +4368,7 @@ containing a value of this type.
         public static final int not_download=0x7f0700f7;
         public static final int notify=0x7f0700f8;
         public static final int now_refresh_list=0x7f0700f9;
-        public static final int official_accounts=0x7f0702c8;
+        public static final int official_accounts=0x7f0702c9;
         public static final int offline_call_push=0x7f070202;
         public static final int ok=0x7f0700fa;
         public static final int operation_user_agreement=0x7f070203;
@@ -4380,15 +4381,15 @@ containing a value of this type.
         public static final int picture=0x7f0700fd;
         public static final int please_check=0x7f0700fe;
         public static final int please_set_the_current=0x7f0700ff;
-        public static final int profile_txt_album=0x7f0702c9;
-        public static final int profile_txt_card=0x7f0702ca;
-        public static final int profile_txt_collect=0x7f0702cb;
-        public static final int profile_txt_money=0x7f0702cc;
-        public static final int profile_txt_mycode=0x7f0702cd;
-        public static final int profile_txt_setting=0x7f0702ce;
-        public static final int profile_txt_smail=0x7f0702cf;
-        public static final int profile_txt_userid=0x7f0702d0;
-        public static final int profile_txt_username=0x7f0702d1;
+        public static final int profile_txt_album=0x7f0702ca;
+        public static final int profile_txt_card=0x7f0702cb;
+        public static final int profile_txt_collect=0x7f0702cc;
+        public static final int profile_txt_money=0x7f0702cd;
+        public static final int profile_txt_mycode=0x7f0702ce;
+        public static final int profile_txt_setting=0x7f0702cf;
+        public static final int profile_txt_smail=0x7f0702d0;
+        public static final int profile_txt_userid=0x7f0702d1;
+        public static final int profile_txt_username=0x7f0702d2;
         public static final int prompt=0x7f070100;
         public static final int push_nick=0x7f070101;
         public static final int push_no_disturb=0x7f070208;
@@ -4413,7 +4414,7 @@ containing a value of this type.
         public static final int recharge_single_limit_msg=0x7f07021a;
         public static final int recharge_success=0x7f07021b;
         public static final int recoding_fail=0x7f070103;
-        public static final int recommended_friends=0x7f0702d2;
+        public static final int recommended_friends=0x7f0702d3;
         public static final int record_finish_toast=0x7f07021c;
         public static final int recording_video=0x7f070104;
         public static final int red_money=0x7f07021d;
@@ -4464,13 +4465,13 @@ containing a value of this type.
         public static final int set_custom_appkey=0x7f070234;
         public static final int set_custom_server=0x7f070235;
         public static final int setting=0x7f07011b;
-        public static final int setting_btn_exit=0x7f0702d3;
+        public static final int setting_btn_exit=0x7f0702d4;
         public static final int setting_nickname=0x7f07011c;
-        public static final int setting_txt_about=0x7f0702d4;
-        public static final int setting_txt_msgtip=0x7f0702d5;
-        public static final int setting_txt_tongyong=0x7f0702d6;
-        public static final int setting_txt_usersafe=0x7f0702d7;
-        public static final int setting_txt_yinsi=0x7f0702d8;
+        public static final int setting_txt_about=0x7f0702d5;
+        public static final int setting_txt_msgtip=0x7f0702d6;
+        public static final int setting_txt_tongyong=0x7f0702d7;
+        public static final int setting_txt_usersafe=0x7f0702d8;
+        public static final int setting_txt_yinsi=0x7f0702d9;
         public static final int shake=0x7f07011d;
         public static final int single_day_pay_quota=0x7f070236;
         public static final int single_limit=0x7f070237;
@@ -4559,7 +4560,7 @@ containing a value of this type.
         public static final int umeng_common_download_failed=0x7f07027c;
         public static final int umeng_common_download_finish=0x7f07027d;
         public static final int umeng_common_download_notification_prefix=0x7f07027e;
-        public static final int umeng_common_icon=0x7f0702d9;
+        public static final int umeng_common_icon=0x7f0702da;
         public static final int umeng_common_info_interrupt=0x7f07027f;
         public static final int umeng_common_network_break_alert=0x7f070280;
         public static final int umeng_common_patch_finish=0x7f070281;
@@ -4581,23 +4582,23 @@ containing a value of this type.
         public static final int user_forbidden=0x7f070288;
         public static final int user_name=0x7f070134;
         public static final int user_removed_from_group=0x7f070289;
-        public static final int userinfo_btn_add_contact=0x7f0702da;
-        public static final int userinfo_btn_send_msg=0x7f0702db;
-        public static final int userinfo_btn_send_video=0x7f0702dc;
-        public static final int userinfo_txt_address=0x7f0702dd;
-        public static final int userinfo_txt_area=0x7f0702de;
-        public static final int userinfo_txt_avatar=0x7f0702df;
-        public static final int userinfo_txt_name=0x7f0702e0;
-        public static final int userinfo_txt_nick=0x7f0702e1;
-        public static final int userinfo_txt_noinput=0x7f0702e2;
-        public static final int userinfo_txt_nosettings=0x7f0702e3;
-        public static final int userinfo_txt_note_mark=0x7f0702e4;
-        public static final int userinfo_txt_profile=0x7f0702e5;
-        public static final int userinfo_txt_qrcode=0x7f0702e6;
-        public static final int userinfo_txt_sex=0x7f0702e7;
-        public static final int userinfo_txt_sign=0x7f0702e8;
-        public static final int userinfo_txt_title=0x7f0702e9;
-        public static final int userinfo_txt_wechat_no=0x7f0702ea;
+        public static final int userinfo_btn_add_contact=0x7f0702db;
+        public static final int userinfo_btn_send_msg=0x7f0702dc;
+        public static final int userinfo_btn_send_video=0x7f0702dd;
+        public static final int userinfo_txt_address=0x7f0702de;
+        public static final int userinfo_txt_area=0x7f0702df;
+        public static final int userinfo_txt_avatar=0x7f0702e0;
+        public static final int userinfo_txt_name=0x7f0702e1;
+        public static final int userinfo_txt_nick=0x7f0702e2;
+        public static final int userinfo_txt_noinput=0x7f0702e3;
+        public static final int userinfo_txt_nosettings=0x7f0702e4;
+        public static final int userinfo_txt_note_mark=0x7f0702e5;
+        public static final int userinfo_txt_profile=0x7f0702e6;
+        public static final int userinfo_txt_qrcode=0x7f0702e7;
+        public static final int userinfo_txt_sex=0x7f0702e8;
+        public static final int userinfo_txt_sign=0x7f0702e9;
+        public static final int userinfo_txt_title=0x7f0702ea;
+        public static final int userinfo_txt_wechat_no=0x7f0702eb;
         public static final int verify_fail=0x7f07028a;
         public static final int verify_going=0x7f07028b;
         public static final int verify_identity=0x7f07028c;
@@ -4606,9 +4607,9 @@ containing a value of this type.
         public static final int voice=0x7f070137;
         public static final int voice_call=0x7f070138;
         public static final int voice_prefix=0x7f070139;
-        public static final int wallet_txt_cards=0x7f0702eb;
-        public static final int wallet_txt_lingqian=0x7f0702ec;
-        public static final int wallet_txt_yinhangka=0x7f0702ed;
+        public static final int wallet_txt_cards=0x7f0702ec;
+        public static final int wallet_txt_lingqian=0x7f0702ed;
+        public static final int wallet_txt_yinhangka=0x7f0702ee;
         public static final int were_mentioned=0x7f07013a;
         public static final int withdraw_amount=0x7f07028d;
         public static final int withdraw_bankcard=0x7f07028e;
@@ -4800,8 +4801,6 @@ containing a value of this type.
         public static final int GridPasswordView_Divider=0x7f0900c9;
         public static final int GridPasswordView_EditText=0x7f0900ca;
         public static final int GridPasswordView_TextView=0x7f0900cb;
-        /**  模糊 
-         */
         public static final int HeadScale=0x7f0900cc;
         public static final int LoadingProgressStyle=0x7f0900cd;
         public static final int MMFontTitleInList=0x7f0900ce;
@@ -4809,11 +4808,7 @@ containing a value of this type.
         public static final int MMListItem=0x7f0900d0;
         public static final int MyAlertDialog=0x7f0900d1;
         public static final int MyDialogStyle=0x7f0900d2;
-        /**  模糊 
-         */
         public static final int MyDialogStyleBottom=0x7f0900d3;
-        /**  模糊 
-         */
         public static final int MyDialogStyleTop=0x7f0900d4;
         public static final int PayTypeIconStyle=0x7f0900d5;
         public static final int Platform_AppCompat=0x7f090010;
