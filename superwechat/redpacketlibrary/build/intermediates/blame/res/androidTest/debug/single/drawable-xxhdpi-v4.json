@@ -172,12 +172,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\em_transfer_chatto_bg_focused.9.png"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\rp_bg_circular_yellow.png",
-        "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\rp_bg_circular_yellow.png"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\rp_change_icon_grey.png",
         "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\rp_change_icon_grey.png"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\rp_bg_circular_yellow.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\rp_bg_circular_yellow.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\rp_search_bar_input.9.png",
@@ -192,12 +192,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\em_chat_red_packet_normal.png"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\rp_small_random_bg.png",
-        "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\rp_small_random_bg.png"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\rp_picture_frame_lack.png",
         "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\rp_picture_frame_lack.png"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\rp_small_random_bg.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\rp_small_random_bg.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\em_chat_red_packet_pressed.png",

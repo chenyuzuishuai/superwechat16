@@ -144,12 +144,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_popup_transfer.xml"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_fragment_transfer_packet.xml",
-        "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_fragment_transfer_packet.xml"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_big_expression.xml",
         "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\layout\\ease_row_big_expression.xml"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_fragment_transfer_packet.xml",
+        "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_fragment_transfer_packet.xml"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_pay_change_no_pwd_dialog.xml",

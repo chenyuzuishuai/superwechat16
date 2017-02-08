@@ -152,12 +152,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\drawable-hdpi-v4\\ee_24.png"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ease_chatting_biaoqing_btn_normal.png",
-        "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\drawable-hdpi-v4\\ease_chatting_biaoqing_btn_normal.png"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ease_msg_state_fail_resend_pressed.png",
         "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\drawable-hdpi-v4\\ease_msg_state_fail_resend_pressed.png"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ease_chatting_biaoqing_btn_normal.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\drawable-hdpi-v4\\ease_chatting_biaoqing_btn_normal.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ease_chat_face_pressed.png",
