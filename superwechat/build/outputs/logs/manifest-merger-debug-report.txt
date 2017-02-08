@@ -145,9 +145,9 @@ MERGED from [com.android.support:appcompat-v7:23.0.1] D:\workplace\superwechat\s
 	android:allowBackup
 		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:51:9-35
 	android:icon
-		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:52:9-48
+		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:52:9-43
 	android:name
-		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:50:9-59
+		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:50:9-66
 activity#cn.ucai.superwechat.ui.MainActivity
 ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:54:9-59:55
 	android:screenOrientation
