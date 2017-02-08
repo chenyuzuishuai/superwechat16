@@ -24,12 +24,15 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.R;
@@ -40,14 +43,18 @@ import cn.ucai.superwechat.utils.MFGT;
 
 /**
  * Login screen
- *
  */
 public class LoginActivity extends BaseActivity {
     private static final String TAG = "LoginActivity";
     public static final int REQUEST_CODE_SETNICK = 1;
-    private EditText usernameEditText;
-    private EditText passwordEditText;
-
+    @BindView(R.id.img_back)
+    ImageView imgBack;
+    @BindView(R.id.txt_title)
+    TextView txtTitle;
+    @BindView(R.id.et_username)
+    EditText etUsername;
+    @BindView(R.id.et_password)
+    EditText etPassword;
     private boolean progressShow;
     private boolean autoLogin = false;
 
@@ -65,14 +72,15 @@ public class LoginActivity extends BaseActivity {
         setContentView(R.layout.em_activity_login);
         ButterKnife.bind(this);
 
-        usernameEditText = (EditText) findViewById(R.id.username);
-        passwordEditText = (EditText) findViewById(R.id.password);
-
+        imgBack.setVisibility(View.VISIBLE);
+        txtTitle.setVisibility(View.VISIBLE);
+        txtTitle.setText(R.string.login);
+        setListener();
         // if user changed, clear the password
-        usernameEditText.addTextChangedListener(new TextWatcher() {
+        etUsername.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                passwordEditText.setText(null);
+                etPassword.setText(null);
             }
 
             @Override
@@ -86,8 +94,11 @@ public class LoginActivity extends BaseActivity {
             }
         });
         if (SuperWeChatHelper.getInstance().getCurrentUsernName() != null) {
-            usernameEditText.setText(SuperWeChatHelper.getInstance().getCurrentUsernName());
+            etUsername.setText(SuperWeChatHelper.getInstance().getCurrentUsernName());
         }
+    }
+
+    private void setListener() {
     }
 
     /**
@@ -95,13 +106,13 @@ public class LoginActivity extends BaseActivity {
      *
      * @param view
      */
-    public void login(View view) {
+    public void login() {
         if (!EaseCommonUtils.isNetWorkConnected(this)) {
             Toast.makeText(this, R.string.network_isnot_available, Toast.LENGTH_SHORT).show();
             return;
         }
-        String currentUsername = usernameEditText.getText().toString().trim();
-        String currentPassword = passwordEditText.getText().toString().trim();
+        String currentUsername = etUsername.getText().toString().trim();
+        String currentPassword = etPassword.getText().toString().trim();
 
         if (TextUtils.isEmpty(currentUsername)) {
             Toast.makeText(this, R.string.User_name_cannot_be_empty, Toast.LENGTH_SHORT).show();
@@ -190,14 +201,7 @@ public class LoginActivity extends BaseActivity {
     }
 
 
-    /**
-     * register
-     *
-     * @param view
-     */
-    public void register(View view) {
-        startActivityForResult(new Intent(this, RegisterActivity.class), 0);
-    }
+
 
     @Override
     protected void onResume() {
@@ -210,5 +214,20 @@ public class LoginActivity extends BaseActivity {
     @OnClick(R.id.login_back)
     public void onClick() {
         MFGT.finish(this);
+    }
+
+    @OnClick({R.id.img_back, R.id.btn_login, R.id.btn_register})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.img_back:
+                MFGT.finish(this);
+                break;
+            case R.id.btn_login:
+                login();
+                break;
+            case R.id.btn_register:
+                MFGT.gotoRegister(this);
+                break;
+        }
     }
 }
