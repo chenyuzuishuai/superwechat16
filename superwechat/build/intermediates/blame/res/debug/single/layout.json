@@ -4,12 +4,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\layout\\em_row_contact_with_checkbox.xml"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\layout\\activity_guide.xml",
-        "source": "D:\\workplace\\superwechat\\superwechat\\res\\layout\\activity_guide.xml"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\layout\\rp_activity_red_packet_detail.xml",
         "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\superwechat\\redpacketlibrary\\unspecified\\res\\layout\\rp_activity_red_packet_detail.xml"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\layout\\activity_guide.xml",
+        "source": "D:\\workplace\\superwechat\\superwechat\\res\\layout\\activity_guide.xml"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\layout\\ease_widget_contact_list.xml",
