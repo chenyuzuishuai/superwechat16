@@ -34,6 +34,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alipay.security.mobile.module.commonutils.LOG;
 import com.easemob.redpacketsdk.constant.RPConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.hyphenate.EMCallBack;
@@ -51,12 +52,16 @@ import cn.ucai.superwechat.db.InviteMessgeDao;
 import cn.ucai.superwechat.db.UserDao;
 import cn.ucai.superwechat.runtimepermissions.PermissionsManager;
 import cn.ucai.superwechat.runtimepermissions.PermissionsResultAction;
+import cn.ucai.superwechat.utils.L;
+
+import com.hyphenate.easeui.domain.User;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.util.EMLog;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 
 import java.util.List;
+import java.util.Map;
 
 @SuppressLint("NewApi")
 public class MainActivity extends BaseActivity {
@@ -88,20 +93,58 @@ public class MainActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-		    String packageName = getPackageName();
-		    PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
-		    if (!pm.isIgnoringBatteryOptimizations(packageName)) {
-		        Intent intent = new Intent();
-		        intent.setAction(android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
-		        intent.setData(Uri.parse("package:" + packageName));
-		        startActivity(intent);
-		    }
-		}
+		savePower();
+		checkAccount( savedInstanceState);
+
+		// runtime permission for android 6.0, just require all permissions here for simple
+		requestPermissions();
+
+		initView();
+        initUmeng();
+
+
+		showExceptionDialogFromIntent(getIntent());
+
+		inviteMessgeDao = new InviteMessgeDao(this);
+		UserDao userDao = new UserDao(this);
+		initFragment();
+
+
+		//register broadcast receiver to receive the change of group from SuperWeChatHelper
+		registerBroadcastReceiver();
 		
+		
+		EMClient.getInstance().contactManager().setContactListener(new MyContactListener());
+		//debug purpose only
+        registerInternalDebugReceiver();
+   String username = EMClient.getInstance().getCurrentUser();
+		L.e(TAG,"username="+username);
+		Map<String ,User> map =SuperWeChatHelper.getInstance().getAPPContactList();
+		L.e(TAG,"map="+map.get(username));
+	}
+
+	private void initFragment() {
+		conversationListFragment = new ConversationListFragment();
+		contactListFragment = new ContactListFragment();
+		SettingsFragment settingFragment = new SettingsFragment();
+		fragments = new Fragment[] { conversationListFragment, contactListFragment, settingFragment};
+
+		getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, conversationListFragment)
+				.add(R.id.fragment_container, contactListFragment).hide(contactListFragment).show(conversationListFragment)
+				.commit();
+	}
+
+	private void initUmeng() {
+		//umeng api
+		MobclickAgent.updateOnlineConfig(this);
+		UmengUpdateAgent.setUpdateOnlyWifi(false);
+		UmengUpdateAgent.update(this);
+	}
+
+	private void checkAccount(Bundle savedInstanceState) {
 		//make sure activity will not in background if user is logged into another device or removed
 		if (savedInstanceState != null && savedInstanceState.getBoolean(Constant.ACCOUNT_REMOVED, false)) {
-		    SuperWeChatHelper.getInstance().logout(false,null);
+			SuperWeChatHelper.getInstance().logout(false,null);
 			finish();
 			startActivity(new Intent(this, LoginActivity.class));
 			return;
@@ -111,36 +154,19 @@ public class MainActivity extends BaseActivity {
 			return;
 		}
 		setContentView(R.layout.em_activity_main);
-		// runtime permission for android 6.0, just require all permissions here for simple
-		requestPermissions();
+	}
 
-		initView();
-
-		//umeng api
-		MobclickAgent.updateOnlineConfig(this);
-		UmengUpdateAgent.setUpdateOnlyWifi(false);
-		UmengUpdateAgent.update(this);
-
-		showExceptionDialogFromIntent(getIntent());
-
-		inviteMessgeDao = new InviteMessgeDao(this);
-		UserDao userDao = new UserDao(this);
-		conversationListFragment = new ConversationListFragment();
-		contactListFragment = new ContactListFragment();
-		SettingsFragment settingFragment = new SettingsFragment();
-		fragments = new Fragment[] { conversationListFragment, contactListFragment, settingFragment};
-
-		getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, conversationListFragment)
-				.add(R.id.fragment_container, contactListFragment).hide(contactListFragment).show(conversationListFragment)
-				.commit();
-
-		//register broadcast receiver to receive the change of group from SuperWeChatHelper
-		registerBroadcastReceiver();
-		
-		
-		EMClient.getInstance().contactManager().setContactListener(new MyContactListener());
-		//debug purpose only
-        registerInternalDebugReceiver();
+	private void savePower() {
+		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+			String packageName = getPackageName();
+			PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
+			if (!pm.isIgnoringBatteryOptimizations(packageName)) {
+				Intent intent = new Intent();
+				intent.setAction(android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+				intent.setData(Uri.parse("package:" + packageName));
+				startActivity(intent);
+			}
+		}
 	}
 
 	@TargetApi(23)
