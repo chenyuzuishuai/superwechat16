@@ -1278,6 +1278,7 @@ public class SuperWeChatHelper {
         isGroupAndContactListenerRegisted = false;
         
         setContactList(null);
+        setAPPContactList(null);
         setRobotList(null);
         getUserProfileManager().reset();
         SuperWeChatDBManager.getInstance().closeDB();
@@ -1321,7 +1322,7 @@ public class SuperWeChatHelper {
      * @return
      */
     public Map<String, User> getAPPContactList() {
-        if (isLoggedIn() && appContactList == null) {
+        if (isLoggedIn() && (appContactList == null || appContactList.size()==0) ){
             appContactList = demoModel.getAPPContactList();
         }
 
@@ -1331,5 +1332,19 @@ public class SuperWeChatHelper {
         }
 
         return appContactList;
+    }
+
+    /**
+     * update user list to cache and database
+     *
+     * @param contactInfoList
+     */
+    public void updateAPPContactList(List<User> contactInfoList) {
+        for (User u : contactInfoList) {
+            appContactList.put(u.getMUserName(), u);
+        }
+        ArrayList<User> mList = new ArrayList<User>();
+        mList.addAll(appContactList.values());
+        demoModel.saveAPPContactList(mList);
     }
 }
