@@ -13,6 +13,7 @@
  */
 package cn.ucai.superwechat.ui;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
@@ -116,7 +117,7 @@ public class LoginActivity extends BaseActivity {
     /**
      * login
      *
-     * @param view
+     * @param
      */
     public void login() {
         if (!EaseCommonUtils.isNetWorkConnected(this)) {
@@ -220,7 +221,7 @@ public class LoginActivity extends BaseActivity {
                     pd.dismiss();
                 }
                 // get user's info (this should be get from App's server or 3rd party service)
-                SuperWeChatHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
+                SuperWeChatHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo(LoginActivity.this);
 
                 Intent intent = new Intent(LoginActivity.this,
                         MainActivity.class);

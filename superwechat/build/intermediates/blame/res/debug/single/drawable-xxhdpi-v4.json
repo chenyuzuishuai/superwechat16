@@ -12,12 +12,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\superwechat\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_change_details.png"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_jd_grey_icon.png",
-        "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\superwechat\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_jd_grey_icon.png"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_packet_detail_bg.png",
         "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\superwechat\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_packet_detail_bg.png"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_jd_grey_icon.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\superwechat\\redpacketlibrary\\unspecified\\res\\drawable-xxhdpi-v4\\rp_jd_grey_icon.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\em_transfer_chatfrom_bg_normal.9.png",
