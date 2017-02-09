@@ -155,8 +155,8 @@ public class UserProfileManager {
 			@Override
 			public void onSuccess(EaseUser value) {
 			    if(value != null){
-    				setCurrentUserNick(value.getNick());
-    				setCurrentUserAvatar(value.getAvatar());
+//    				setCurrentUserNick(value.getNick());
+//    				setCurrentUserAvatar(value.getAvatar());
 			    }
 			}
 
@@ -169,10 +169,14 @@ public class UserProfileManager {
 		NetDao.getUserInfoByUsername( activity, EMClient.getInstance().getCurrentUser(), new OnCompleteListener<String>() {
 			@Override
 			public void onSuccess(String s) {
+				L.e("UserProfileManager","s="+s);
 				if (s!=null){
 					Result result = ResultUtils.getResultFromJson(s, User.class);
 					if (result!=null&&result.isRetMsg()){
-
+            User user = (User) result.getRetData();
+						//save user info to db
+						setCurrentUserNick(user.getMUserNick());
+						//setCurrentUserAvatar(user.getAvatar());
 					}else {
 
 					}

@@ -10,6 +10,7 @@ import cn.ucai.superwechat.SuperWeChatApplication;
 import cn.ucai.superwechat.domain.InviteMessage;
 import cn.ucai.superwechat.domain.RobotUser;
 import com.hyphenate.easeui.domain.EaseUser;
+import com.hyphenate.easeui.domain.User;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.util.HanziToPinyin;
 
@@ -112,7 +113,7 @@ public class SuperWeChatDBManager {
             db.replace(UserDao.TABLE_NAME, null, values);
         }
     }
-    
+
     public void setDisabledGroups(List<String> groups){
         setList(UserDao.COLUMN_NAME_DISABLED_GROUPS, groups);
     }
@@ -372,4 +373,98 @@ public class SuperWeChatDBManager {
 		}
 		return users;
 	}
+
+    /**
+     * save contact list
+     *
+     * @param contactList
+     */
+    synchronized public void saveAPPContactList(List<User> contactList) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        if (db.isOpen()) {
+            db.delete(UserDao.USER_TABLE_NAME, null, null);
+            for (User user : contactList) {
+                ContentValues values = new ContentValues();
+                values.put(UserDao.USER_COLUMN_NAME, user.getMUserName());
+                if(user.getMUserNick() != null)
+                    values.put(UserDao.COLUMN_NAME_NICK, user.getMUserNick());
+                if(user.getMAvatarId() != null)
+                    values.put(UserDao.USERCOLUMN_NAME_AVATAR_ID ,user.getMAvatarId());
+                if (user.getMAvatarPath() !=null)
+                    values.put(UserDao.USERCOLUMN_NAME_AVATAR_PATH,user.getMAvatarPath());
+                if (user.getMAvatarSuffix() !=null)
+                    values.put(UserDao.USERCOLUMN_NAME_AVATAR_SUFFIX,user.getMAvatarSuffix());
+                if (user.getMAvatarType() != null)
+                    values.put(UserDao.USERCOLUMN_NAME_AVATAR_TYPE, user.getMAvatarType());
+                if (user.getMAvatarLastUpdateTime() !=null){
+                    values.put(UserDao.USERCOLUMN_NAME_AVATAR_LASTUPDATE_TIME,user.getMAvatarLastUpdateTime());
+                }
+                db.replace(UserDao.TABLE_NAME, null, values);
+            }
+        }
+    }
+
+    /**
+     * get contact list
+     *
+     * @return
+     */
+    synchronized public Map<String, User> getAPPContactList() {
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Map<String, User> users = new Hashtable<String, User>();
+        if (db.isOpen()) {
+            Cursor cursor = db.rawQuery("select * from " + UserDao.USER_TABLE_NAME /* + " desc" */, null);
+            while (cursor.moveToNext()) {
+                User user = new User();
+                user.setMUserName(cursor.getString(cursor.getColumnIndex(UserDao.USER_COLUMN_NAME)));
+                user.setMUserNick(cursor.getString(cursor.getColumnIndex(UserDao.USER_COLUMN_NICK)));
+                user.setMAvatarId(cursor.getInt(cursor.getColumnIndex(UserDao.USERCOLUMN_NAME_AVATAR_ID)));
+                user.setMAvatarPath(cursor.getString(cursor.getColumnIndex(UserDao.USERCOLUMN_NAME_AVATAR_PATH)));
+                user.setMAvatarSuffix(cursor.getString(cursor.getColumnIndex(UserDao.USERCOLUMN_NAME_AVATAR_SUFFIX)));
+                user.setMAvatarType(cursor.getInt(cursor.getColumnIndex(UserDao.USERCOLUMN_NAME_AVATAR_TYPE)));
+                user.setMAvatarLastUpdateTime(cursor.getString(cursor.getColumnIndex(UserDao.USERCOLUMN_NAME_AVATAR_LASTUPDATE_TIME)));
+                    EaseCommonUtils.setAPPUserInitialLetter(user);
+                users.put(user.getMUserName(), user);
+            }
+            cursor.close();
+        }
+        return users;
+    }
+
+    /**
+     * delete a contact
+     * @param username
+     */
+    synchronized public void deleteAPPContact(String username){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        if(db.isOpen()){
+            db.delete(UserDao.USER_TABLE_NAME, UserDao.USER_COLUMN_NAME + " = ?", new String[]{username});
+        }
+    }
+
+    /**
+     * save a contact
+     * @param user
+     */
+    synchronized public void saveAPPContact(User user){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(UserDao.USER_TABLE_NAME, user.getMUserName());
+        if(user.getMUserNick() != null)
+            values.put(UserDao.COLUMN_NAME_NICK, user.getMUserNick());
+        if(user.getMAvatarId() != null)
+            values.put(UserDao.USERCOLUMN_NAME_AVATAR_ID ,user.getMAvatarId());
+        if (user.getMAvatarPath() !=null)
+            values.put(UserDao.USERCOLUMN_NAME_AVATAR_PATH,user.getMAvatarPath());
+        if (user.getMAvatarSuffix() !=null)
+            values.put(UserDao.USERCOLUMN_NAME_AVATAR_SUFFIX,user.getMAvatarSuffix());
+        if (user.getMAvatarType() != null)
+            values.put(UserDao.USERCOLUMN_NAME_AVATAR_TYPE, user.getMAvatarType());
+        if (user.getMAvatarLastUpdateTime() !=null)
+            values.put(UserDao.USERCOLUMN_NAME_AVATAR_LASTUPDATE_TIME,user.getMAvatarLastUpdateTime());
+
+            if(db.isOpen()){
+            db.replace(UserDao.USER_TABLE_NAME, null, values);
+        }
+    }
 }
