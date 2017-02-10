@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_white_pressed_shape.xml",
-        "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\superwechat\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_white_pressed_shape.xml"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_ll_white_shape.xml",
         "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\superwechat\\redpacketlibrary\\unspecified\\res\\drawable\\rp_ll_white_shape.xml"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_white_pressed_shape.xml",
+        "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\superwechat\\redpacketlibrary\\unspecified\\res\\drawable\\rp_btn_white_pressed_shape.xml"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\em_chat_video_selector.xml",
@@ -44,12 +44,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable\\em_btn_green_selector.xml"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\em_roominfo_add_btn.xml",
-        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable\\em_roominfo_add_btn.xml"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_update_button_cancel_bg_selector.xml",
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable\\umeng_update_button_cancel_bg_selector.xml"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\em_roominfo_add_btn.xml",
+        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable\\em_roominfo_add_btn.xml"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\em_camera_switch_selector.xml",
@@ -294,6 +294,10 @@
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\em_tab_setting_bg.xml",
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable\\em_tab_setting_bg.xml"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\qrcode.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable\\qrcode.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_btn_cancel_shape.xml",

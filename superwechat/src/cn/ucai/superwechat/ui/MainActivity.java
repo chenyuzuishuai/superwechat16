@@ -150,8 +150,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
     private void initFragment() {
         conversationListFragment = new ConversationListFragment();
         contactListFragment = new ContactListFragment();
-        SettingsFragment settingFragment = new SettingsFragment();
-        fragments = new Fragment[]{conversationListFragment, contactListFragment, settingFragment};
+        ProfileFragment profileFragment = new ProfileFragment();
 
 //		getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, conversationListFragment)
 //				.add(R.id.fragment_container, contactListFragment).hide(contactListFragment).show(conversationListFragment)
@@ -160,7 +159,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
         adapter.addFragment(conversationListFragment, "微信");
         adapter.addFragment(contactListFragment, "通讯录");
         adapter.addFragment(new DiscoverFragment(), "发现");
-        adapter.addFragment(settingFragment, "我");
+        adapter.addFragment(profileFragment, "我");
         layoutViewpage.setAdapter(adapter);
         layoutTabhost.setChecked(0);
         layoutTabhost.setOnCheckedChangeListener(this);
@@ -369,7 +368,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
 
     @Override
     public void onPageSelected(int position) {
-         layoutTabhost.setChecked(position);
+        layoutTabhost.setChecked(position);
         layoutViewpage.setCurrentItem(position);
     }
 
