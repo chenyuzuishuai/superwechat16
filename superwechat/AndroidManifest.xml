@@ -340,6 +340,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 设置页面 -->
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <!-- 红包相关Activity end -->
 
 
