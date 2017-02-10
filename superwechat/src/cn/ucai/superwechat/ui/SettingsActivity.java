@@ -21,6 +21,7 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -37,6 +38,7 @@ import com.hyphenate.util.EMLog;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.SuperWeChatHelper;
 import cn.ucai.superwechat.SuperWeChatModel;
@@ -130,7 +132,7 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
         txtTitle.setText("设置");
         txtTitle.setVisibility(View.VISIBLE);
         imgBack.setVisibility(View.VISIBLE);
-
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);//不让键盘自动弹出
         rl_switch_notification = (RelativeLayout) findViewById(R.id.rl_switch_notification);
         rl_switch_sound = (RelativeLayout) findViewById(R.id.rl_switch_sound);
         rl_switch_vibrate = (RelativeLayout) findViewById(R.id.rl_switch_vibrate);
@@ -283,9 +285,7 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.img_back:
-                MFGT.finish(this);
-                break;
+
             //end of red packet code
             case R.id.rl_switch_notification:
                 if (notifySwitch.isSwitchOpen()) {
@@ -468,4 +468,8 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
     }
 
 
+    @OnClick(R.id.img_back)
+    public void onClick() {
+        MFGT.finish(this);
+    }
 }
