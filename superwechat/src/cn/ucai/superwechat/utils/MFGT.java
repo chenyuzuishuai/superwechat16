@@ -52,4 +52,10 @@ public class MFGT {
     public static void gotoSettings(FragmentActivity activity) {
         startActivity(activity, SettingsActivity.class);
     }
+
+    //清空Task方法
+    public static void gotoLoginCleanTask(Activity activity){
+        startActivity(activity,new Intent(activity,LoginActivity.class)
+                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
+    }
 }

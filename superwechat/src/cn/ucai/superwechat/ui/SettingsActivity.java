@@ -55,6 +55,8 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
     ImageView imgBack;
     @BindView(R.id.img_right)
     ImageView imgRight;
+    @BindView(R.id.txt_title)
+    TextView txtTitle;
     /**
      * new message notification
      */
@@ -125,8 +127,10 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.em_fragment_conversation_settings);
         ButterKnife.bind(this);
-        txtLeft.setVisibility(View.VISIBLE);
-        imgRight.setVisibility(View.VISIBLE);
+        txtTitle.setText("设置");
+        txtTitle.setVisibility(View.VISIBLE);
+        imgBack.setVisibility(View.VISIBLE);
+
         rl_switch_notification = (RelativeLayout) findViewById(R.id.rl_switch_notification);
         rl_switch_sound = (RelativeLayout) findViewById(R.id.rl_switch_sound);
         rl_switch_vibrate = (RelativeLayout) findViewById(R.id.rl_switch_vibrate);
@@ -279,6 +283,9 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.img_back:
+                MFGT.finish(this);
+                break;
             //end of red packet code
             case R.id.rl_switch_notification:
                 if (notifySwitch.isSwitchOpen()) {
@@ -435,7 +442,7 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
                         pd.dismiss();
                         // show login screen
                         finish();
-                        MFGT.gotoLogin(SettingsActivity.this);
+                        MFGT.gotoLoginCleanTask(SettingsActivity.this);
                     }
                 });
             }
