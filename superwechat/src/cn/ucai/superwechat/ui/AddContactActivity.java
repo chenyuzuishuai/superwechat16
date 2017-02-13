@@ -96,11 +96,11 @@ public class AddContactActivity extends BaseActivity{
 	}
 
 	private void searAppUser(String name) {
-
 		NetDao.getUserInfoByUsername(this, name, new OnCompleteListener<String>() {
 			@Override
 			public void onSuccess(String s) {
 				L.e("s=",s);
+				boolean isSuccess = false;
 				progressDialog.dismiss();
 				if (s!=null){
 				Result result =	ResultUtils.getListResultFromJson(s, User.class);
@@ -108,15 +108,16 @@ public class AddContactActivity extends BaseActivity{
 						if (result.isRetMsg()){
                    User user = (User) result.getRetData();
 							if (user!=null){
+								isSuccess = true;
 								MFGT.gotoFirent(AddContactActivity.this,user);
+							}else {
+								searchedUserLayout.setVisibility(View.VISIBLE);
 							}
-						}else {
-							searchedUserLayout.setVisibility(View.VISIBLE);
+						}
 					}
 				}
 				}
 
-			}
 
 			@Override
 			public void onError(String error) {
