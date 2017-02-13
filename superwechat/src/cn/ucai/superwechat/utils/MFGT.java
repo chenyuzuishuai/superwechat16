@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentActivity;
 import java.util.ArrayList;
 
 import cn.ucai.superwechat.R;
+import cn.ucai.superwechat.ui.AddContactActivity;
 import cn.ucai.superwechat.ui.GuideActivity;
 import cn.ucai.superwechat.ui.LoginActivity;
 import cn.ucai.superwechat.ui.RegisterActivity;
@@ -16,7 +17,7 @@ import cn.ucai.superwechat.ui.UserProfileActivity;
 
 
 /**
- * �����л�Activityʱ�Ķ���
+ * 页面的跳转
  */
 public class MFGT {
     public static void finish(Activity activity) {
@@ -55,12 +56,18 @@ public class MFGT {
     }
 
     //清空Task方法
-    public static void gotoLoginCleanTask(Activity activity){
-        startActivity(activity,new Intent(activity,LoginActivity.class)
+    public static void gotoLoginCleanTask(Activity activity) {
+        startActivity(activity, new Intent(activity, LoginActivity.class)
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
     }
+
     //前往个人中心界面
     public static void gotoUserProfile(FragmentActivity activity) {
         startActivity(activity, UserProfileActivity.class);
+    }
+
+    //前往添加好友界面
+    public static void gotoAddContact(Activity activity) {
+        startActivity(activity, AddContactActivity.class);
     }
 }
