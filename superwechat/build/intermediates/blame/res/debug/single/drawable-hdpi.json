@@ -244,12 +244,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\em_conversation_selected.png"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon_010_cover.png",
-        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\icon_010_cover.png"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\right.png",
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\right.png"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon_010_cover.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\icon_010_cover.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\em_contact_list_selected.png",
@@ -444,12 +444,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\icon_035_cover.png"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\profile_pressed.png",
-        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\profile_pressed.png"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\contact_list_pressed.png",
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\contact_list_pressed.png"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\profile_pressed.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\profile_pressed.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\abc_ic_menu_share_mtrl_alpha.png",
@@ -624,12 +624,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\icon_019_cover.png"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\em_logo_uidemo.png",
-        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\em_logo_uidemo.png"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon_public.png",
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\icon_public.png"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\em_logo_uidemo.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\em_logo_uidemo.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\wp.9.png",

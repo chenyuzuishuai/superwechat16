@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 
+import com.hyphenate.easeui.domain.User;
+
 import java.util.ArrayList;
 
 import cn.ucai.superwechat.R;
@@ -69,5 +71,9 @@ public class MFGT {
     //前往添加好友界面
     public static void gotoAddContact(Activity activity) {
         startActivity(activity, AddContactActivity.class);
+    }
+
+    //跳转到查询用户详情
+    public static void gotoFirent(Activity addContactActivity, User user) {
     }
 }
