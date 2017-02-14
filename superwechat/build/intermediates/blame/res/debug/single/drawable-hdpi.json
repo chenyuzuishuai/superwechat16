@@ -20,20 +20,20 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\auj.png"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\em_camera_switch_pressed.9.png",
-        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\em_camera_switch_pressed.9.png"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\abc_ab_share_pack_mtrl_alpha.9.png",
         "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\abc_list_selector_disabled_holo_dark.9.png",
-        "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_selector_disabled_holo_dark.9.png"
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\em_camera_switch_pressed.9.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\em_camera_switch_pressed.9.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\wo.9.png",
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-hdpi\\wo.9.png"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\umeng_update_btn_check_off_focused_holo_light.png",

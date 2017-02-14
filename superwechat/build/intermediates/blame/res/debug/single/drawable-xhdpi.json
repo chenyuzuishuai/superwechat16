@@ -12,12 +12,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-xhdpi\\icon_020_cover.png"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\icon_013_cover.png",
-        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-xhdpi\\icon_013_cover.png"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\icon_010_cover.png",
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-xhdpi\\icon_010_cover.png"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\icon_013_cover.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-xhdpi\\icon_013_cover.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\abc_list_divider_mtrl_alpha.9.png",
@@ -96,12 +96,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\drawable-xhdpi\\em_chat_file_pressed.png"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\abc_spinner_mtrl_am_alpha.9.png",
-        "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-xhdpi\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\abc_list_pressed_holo_dark.9.png",
         "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-xhdpi\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-xhdpi\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\em_default_avatar.png",

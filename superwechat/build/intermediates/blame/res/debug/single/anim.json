@@ -4,24 +4,24 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\anim\\slide_in_from_right.xml"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\anim\\abc_fade_in.xml"
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\voice_to_icon.xml",
+        "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\anim\\voice_to_icon.xml"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
         "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\voice_to_icon.xml",
-        "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\anim\\voice_to_icon.xml"
-    },
-    {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\push_up_out.xml",
-        "source": "D:\\workplace\\superwechat\\superwechat\\res\\anim\\push_up_out.xml"
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\anim\\abc_fade_in.xml"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\push_right_in.xml",
         "source": "D:\\workplace\\superwechat\\superwechat\\res\\anim\\push_right_in.xml"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\push_up_out.xml",
+        "source": "D:\\workplace\\superwechat\\superwechat\\res\\anim\\push_up_out.xml"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\anim\\fade_out.xml",

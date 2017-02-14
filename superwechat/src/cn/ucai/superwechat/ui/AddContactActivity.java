@@ -100,19 +100,18 @@ public class AddContactActivity extends BaseActivity{
 			@Override
 			public void onSuccess(String s) {
 				L.e("s=",s);
-				boolean isSuccess = false;
 				progressDialog.dismiss();
 				if (s!=null){
-				Result result =	ResultUtils.getListResultFromJson(s, User.class);
+				Result result =	ResultUtils.getResultFromJson(s, User.class);
 					if (result!=null){
 						if (result.isRetMsg()){
-                   User user = (User) result.getRetData();
+                           User user = (User) result.getRetData();
 							if (user!=null){
-								isSuccess = true;
-								MFGT.gotoFirent(AddContactActivity.this,user);
-							}else {
-								searchedUserLayout.setVisibility(View.VISIBLE);
+								L.e("帅!!","我是log");
+								MFGT.gotoFriend(AddContactActivity.this,user);
 							}
+						}else {
+							searchedUserLayout.setVisibility(View.VISIBLE);
 						}
 					}
 				}

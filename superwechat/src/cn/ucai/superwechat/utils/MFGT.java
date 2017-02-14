@@ -9,8 +9,10 @@ import com.hyphenate.easeui.domain.User;
 
 import java.util.ArrayList;
 
+import cn.ucai.superwechat.I;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.ui.AddContactActivity;
+import cn.ucai.superwechat.ui.FriendProileActivity;
 import cn.ucai.superwechat.ui.GuideActivity;
 import cn.ucai.superwechat.ui.LoginActivity;
 import cn.ucai.superwechat.ui.RegisterActivity;
@@ -64,7 +66,7 @@ public class MFGT {
     }
 
     //前往个人中心界面
-    public static void gotoUserProfile(FragmentActivity activity) {
+    public static void gotoUserProfile(Activity activity) {
         startActivity(activity, UserProfileActivity.class);
     }
 
@@ -74,6 +76,13 @@ public class MFGT {
     }
 
     //跳转到查询用户详情
-    public static void gotoFirent(Activity addContactActivity, User user) {
+    public static void gotoFriend(Activity activity, User user) {
+//        Intent intent = new Intent();
+//        intent.setClass(activity,FriendProileActivity.class);
+//        intent.putExtra(I.User.USER_NAME,user);
+//        startActivity(activity,intent);
+        startActivity(activity, new Intent(activity,FriendProileActivity.class)
+                .putExtra(I.User.USER_NAME,user)
+                );
     }
 }
