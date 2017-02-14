@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:2:1-509:12
+ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:2:1-510:12
 	package
 		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:4:5-34
 		INJECTED from D:\workplace\superwechat\superwechat\AndroidManifest.xml
@@ -143,7 +143,7 @@ ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:48:5-80
 	android:name
 		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:48:22-77
 application
-ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:50:5-507:19
+ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:50:5-508:19
 MERGED from [com.android.support:appcompat-v7:23.0.1] D:\workplace\superwechat\superwechat\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:54:9-41
@@ -870,6 +870,10 @@ ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:505:9-54
 	android:name
 		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:505:19-51
 activity#cn.ucai.superwechat.ui.FriendProileActivity
-ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:506:9-70
+ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:506:9-61
 	android:name
 		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:506:19-58
+activity#cn.ucai.superwechat.ui.AddFriendActivity
+ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:507:9-67
+	android:name
+		ADDED from D:\workplace\superwechat\superwechat\AndroidManifest.xml:507:19-55

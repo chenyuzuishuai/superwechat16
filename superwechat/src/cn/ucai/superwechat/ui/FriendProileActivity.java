@@ -19,7 +19,7 @@ import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.SuperWeChatHelper;
 import cn.ucai.superwechat.utils.MFGT;
 
-public class FriendProileActivity extends AppCompatActivity {
+public class FriendProileActivity extends BaseActivity {
     User user;
     @BindView(R.id.txt_title)
     TextView txtTitle;
@@ -73,13 +73,8 @@ public class FriendProileActivity extends AppCompatActivity {
     private void showUserInfo(User user) {
         tvUserinfoNick.setText(user.getMUserNick());
         tvUserinfoName.setText("微信号 " + user.getMUserName());
-        EaseUserUtils.setAPPUserAvatarByPath(this, user.getAvatar(),profileImage );
-        isFriend();
-    }
-
-    private void isFriend() {
-        User u = SuperWeChatHelper.getInstance().getAPPContactList().get(user.getMUserName());
-        if (u==null){
+        EaseUserUtils.setAPPUserAvatarByPath(this, user.getAvatar(), profileImage);
+        if (isFriend()){
             btnSendMsg.setVisibility(View.VISIBLE);
             btnSendVideo.setVisibility(View.VISIBLE);
         }else {
@@ -87,8 +82,31 @@ public class FriendProileActivity extends AppCompatActivity {
         }
     }
 
+    private boolean isFriend() {
+        User u = SuperWeChatHelper.getInstance().getAPPContactList().get(user.getMUserName());
+        if (u == null) {
+           return false;
+        } else {
+            SuperWeChatHelper.getInstance().saveAPPContact(user);
+            return true;
+        }
+    }
+
     @OnClick(R.id.img_back)
     public void onClick() {
         MFGT.finish(this);
+    }
+
+    @OnClick({R.id.btn_add_contact, R.id.btn_send_msg, R.id.btn_send_video})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_add_contact:
+                MFGT.gotoAddFriendMsg(this,user.getMUserName());
+                break;
+            case R.id.btn_send_msg:
+                break;
+            case R.id.btn_send_video:
+                break;
+        }
     }
 }

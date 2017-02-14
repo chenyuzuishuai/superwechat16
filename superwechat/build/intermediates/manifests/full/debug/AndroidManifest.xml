@@ -499,6 +499,7 @@
 
         <activity android:name="cn.ucai.superwechat.ui.GuideActivity" />
         <activity android:name="cn.ucai.superwechat.ui.FriendProileActivity" />
+        <activity android:name="cn.ucai.superwechat.ui.AddFriendActivity" />
     </application>
 
 </manifest>
