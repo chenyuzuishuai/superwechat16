@@ -17,6 +17,9 @@ public class InviteMessage {
 	private String from;
 	private long time;
 	private String reason;
+	private String userNick;
+	private String avatarSuffix;
+	private String avatarLastUpdateTime;
 
 	private InviteMesageStatus status;
 	private String groupId;
@@ -93,7 +96,29 @@ public class InviteMessage {
 	    return groupInviter;	    
 	}
 
+	public String getUserNick() {
+		return userNick;
+	}
 
+	public void setUserNick(String userNick) {
+		this.userNick = userNick;
+	}
+
+	public String getAvatarSuffix() {
+		return avatarSuffix;
+	}
+
+	public void setAvatarSuffix(String avatarSuffix) {
+		this.avatarSuffix = avatarSuffix;
+	}
+
+	public String getAvatarLastUpdateTime() {
+		return avatarLastUpdateTime;
+	}
+
+	public void setAvatarLastUpdateTime(String avatarLastUpdateTime) {
+		this.avatarLastUpdateTime = avatarLastUpdateTime;
+	}
 
 	public enum InviteMesageStatus{
 	    
@@ -120,6 +145,11 @@ public class InviteMessage {
 		GROUPINVITATION_ACCEPTED,
         /**remote user declined your invitation**/
 		GROUPINVITATION_DECLINED
+	}
+
+	public String getAvatar(){
+		String path = "http://101.251.196.90:8000/SuperWeChatServerV2.0/downloadAvatar?name_or_hxid="+getUserNick()+"&avatarType=user_avatar&m_avatar_suffix="+getAvatarSuffix()+"&updatetime="+getAvatarLastUpdateTime();
+		return path;
 	}
 	
 }
