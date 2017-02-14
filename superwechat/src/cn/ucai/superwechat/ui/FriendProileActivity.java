@@ -17,7 +17,11 @@ import butterknife.OnClick;
 import cn.ucai.superwechat.I;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.SuperWeChatHelper;
+import cn.ucai.superwechat.domain.Result;
+import cn.ucai.superwechat.net.NetDao;
+import cn.ucai.superwechat.net.OnCompleteListener;
 import cn.ucai.superwechat.utils.MFGT;
+import cn.ucai.superwechat.utils.ResultUtils;
 
 public class FriendProileActivity extends BaseActivity {
     User user;
@@ -62,15 +66,45 @@ public class FriendProileActivity extends BaseActivity {
         imgBack.setVisibility(View.VISIBLE);
         txtTitle.setVisibility(View.VISIBLE);
         txtTitle.setText("个人信息");
-        user = (User) getIntent().getSerializableExtra(I.User.USER_NAME);
+        user = (User) getIntent().getSerializableExtra(I.User.TABLE_NAME);
         if (user != null) {
-            showUserInfo(user);
+            showUserInfo();
         } else {
-            MFGT.finish(this);
+            String username = getIntent().getStringExtra(I.User.USER_NAME);
+            if (username==null) {
+                MFGT.finish(this);
+            }else {
+             syncUserInfo(username);
+            }
         }
     }
 
-    private void showUserInfo(User user) {
+    private void syncUserInfo(String username) {
+        NetDao.getUserInfoByUsername(this, username, new OnCompleteListener<String>() {
+            @Override
+            public void onSuccess(String s) {
+                if (s!=null){
+                    Result result = ResultUtils.getResultFromJson(s,User.class);
+                    if (result!=null){
+                        if (result.isRetMsg()){
+                            User u = (User) result.getRetData();
+                            if (u!=null){
+                                user = u;
+                                showUserInfo();
+                            }
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onError(String error) {
+
+            }
+        });
+    }
+
+    private void showUserInfo() {
         tvUserinfoNick.setText(user.getMUserNick());
         tvUserinfoName.setText("微信号 " + user.getMUserName());
         EaseUserUtils.setAPPUserAvatarByPath(this, user.getAvatar(), profileImage);

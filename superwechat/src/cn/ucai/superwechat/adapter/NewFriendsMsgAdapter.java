@@ -21,6 +21,8 @@ import com.hyphenate.easeui.utils.EaseUserUtils;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.db.InviteMessgeDao;
 import cn.ucai.superwechat.domain.InviteMessage;
+import cn.ucai.superwechat.ui.NewFriendsMsgActivity;
+import cn.ucai.superwechat.utils.MFGT;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -54,6 +56,7 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
 		if (convertView == null) {
 			holder = new ViewHolder();
 			convertView = View.inflate(context, R.layout.em_row_invite_msg, null);
+			holder.mLayoutinvite = (LinearLayout) convertView.findViewById(R.id.layout_invite);
 			holder.avator = (ImageView) convertView.findViewById(R.id.avatar);
 			holder.reason = (TextView) convertView.findViewById(R.id.message);
 			holder.name = (TextView) convertView.findViewById(R.id.name);
@@ -159,6 +162,13 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
                 holder.status.setBackgroundDrawable(null);
                 holder.status.setEnabled(false);
             }
+			holder.mLayoutinvite.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					MFGT.gotoFriend((NewFriendsMsgActivity)context,msg.getFrom());
+				}
+			});
+
 		}
 
 		return convertView;
@@ -279,6 +289,7 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
     }
 
 	private static class ViewHolder {
+		LinearLayout mLayoutinvite;
 		ImageView avator;
 		TextView name;
 		TextView reason;

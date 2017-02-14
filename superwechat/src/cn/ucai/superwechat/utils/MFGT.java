@@ -83,8 +83,18 @@ public class MFGT {
 //        intent.putExtra(I.User.USER_NAME,user);
 //        startActivity(activity,intent);
         startActivity(activity, new Intent(activity,FriendProileActivity.class)
-                .putExtra(I.User.USER_NAME,user)
+                .putExtra(I.User.TABLE_NAME,user)
                 );
+    }
+
+    public static void gotoFriend(Activity activity, String username) {
+//        Intent intent = new Intent();
+//        intent.setClass(activity,FriendProileActivity.class);
+//        intent.putExtra(I.User.USER_NAME,user);
+//        startActivity(activity,intent);
+        startActivity(activity, new Intent(activity,FriendProileActivity.class)
+                .putExtra(I.User.USER_NAME,username)
+        );
     }
 
     //前往发送好友请求界面
