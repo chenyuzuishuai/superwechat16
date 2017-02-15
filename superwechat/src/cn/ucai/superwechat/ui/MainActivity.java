@@ -63,6 +63,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.Constant;
+import cn.ucai.superwechat.I;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.SuperWeChatHelper;
 import cn.ucai.superwechat.adapter.MainTabAdpter;
@@ -76,6 +77,8 @@ import cn.ucai.superwechat.widget.DMTabHost;
 import cn.ucai.superwechat.widget.MFViewPager;
 import cn.ucai.superwechat.widget.TitleMenu.ActionItem;
 import cn.ucai.superwechat.widget.TitleMenu.TitlePopup;
+
+
 
 @SuppressLint("NewApi")
 public class MainActivity extends BaseActivity implements ViewPager.OnPageChangeListener, DMTabHost.OnCheckedChangeListener {
@@ -545,6 +548,8 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
         sdkHelper.pushActivity(this);
 
         EMClient.getInstance().chatManager().addMessageListener(messageListener);
+
+
     }
 
     @Override
@@ -641,6 +646,11 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         showExceptionDialogFromIntent(intent);
+        boolean isChat = getIntent().getBooleanExtra(I.BACK_MAIN_FROM_CHAT,false);
+        L.e(TAG,"isChat="+isChat);
+        if (isChat){
+            layoutTabhost.setChecked(0);
+        }
     }
 
     /**
