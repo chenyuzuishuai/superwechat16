@@ -101,4 +101,15 @@ public class NetDao {
                 .targetClass(String.class)
                 .execute(listener);
     }
+
+    /**
+     * 从服务器下载所有好友信息
+     */
+    public static void loadContact(Context context, String username ,OnCompleteListener<String> listener){
+        OkHttpUtils<String> utils = new OkHttpUtils<>(context);
+        utils.setRequestUrl(I.REQUEST_DOWNLOAD_CONTACT_ALL_LIST )
+                .addParam(I.Contact.USER_NAME,username)
+                .targetClass(String.class)
+                .execute(listener);
+    }
 }

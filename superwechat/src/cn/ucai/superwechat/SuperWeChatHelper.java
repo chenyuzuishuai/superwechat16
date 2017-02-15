@@ -1202,6 +1202,38 @@ public class SuperWeChatHelper {
                         return;
                     }
 
+                    NetDao.loadContact(appContext, EMClient.getInstance().getCurrentUser(), new OnCompleteListener<String>() {
+                        @Override
+                        public void onSuccess(String s) {
+                            if (s!=null){
+                               Result result = ResultUtils.getListResultFromJson(s,User.class);
+                                if (result!=null&&result.isRetMsg()){
+                                    List<User> list = (List<User>) result.getRetData();
+                                    if (list!=null&&list.size()>0){
+                                        L.e(TAG,"list="+list.size());
+                                        Map<String, User> userMap = new HashMap<String,User>();
+                                        for (User u : list) {
+                                            EaseCommonUtils.setAPPUserInitialLetter(u);
+                                            userMap.put(u.getMUserName(), u);
+                                        }
+                                        // save the contact list to cache
+                                        getAPPContactList().clear();
+                                        getAPPContactList().putAll(userMap);
+                                        // save the contact list to database
+                                        UserDao dao = new UserDao(appContext);
+                                        dao.saveAPPContactList(list);
+                                        broadcastManager.sendBroadcast(new Intent(Constant.ACTION_CONTACT_CHANAGED));
+                                    }
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onError(String error) {
+
+                        }
+                    });
+
                     Map<String, EaseUser> userlist = new HashMap<String, EaseUser>();
                     for (String username : usernames) {
                         EaseUser user = new EaseUser(username);

@@ -352,12 +352,12 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\drawable-hdpi-v4\\ease_app_panel_video_icon.9.png"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ease_ic_launcher.png",
-        "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\drawable-hdpi-v4\\ease_ic_launcher.png"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ee_1.png",
         "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\drawable-hdpi-v4\\ee_1.png"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ease_ic_launcher.png",
+        "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\drawable-hdpi-v4\\ease_ic_launcher.png"
     },
     {
         "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ease_chatfrom_voice_playing_f2.png",

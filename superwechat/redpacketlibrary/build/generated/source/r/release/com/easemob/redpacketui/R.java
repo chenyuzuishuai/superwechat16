@@ -2098,11 +2098,17 @@ containing a value of this type.
         public static int GridPasswordView_Divider=0x7f06001d;
         public static int GridPasswordView_EditText=0x7f06001e;
         public static int GridPasswordView_TextView=0x7f06001f;
+        /**  模糊 
+         */
         public static int HeadScale=0x7f060020;
         public static int LoadingProgressStyle=0x7f060021;
         public static int MyAlertDialog=0x7f060022;
         public static int MyDialogStyle=0x7f060023;
+        /**  模糊 
+         */
         public static int MyDialogStyleBottom=0x7f060024;
+        /**  模糊 
+         */
         public static int MyDialogStyleTop=0x7f060025;
         public static int PayTypeIconStyle=0x7f060026;
         public static int ReceivedMoneyStyle=0x7f060027;

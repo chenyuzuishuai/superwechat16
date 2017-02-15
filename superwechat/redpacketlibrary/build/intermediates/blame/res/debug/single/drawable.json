@@ -236,11 +236,11 @@
         "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\exploded-aar\\superwechat\\EaseUI\\unspecified\\res\\drawable\\ease_chatfrom_bg.xml"
     },
     {
-        "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\drawable\\em_transfer_chatto_bg.xml",
-        "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\res\\drawable\\em_transfer_chatto_bg.xml"
-    },
-    {
         "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\drawable\\rp_loading_anim.xml",
         "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\res\\drawable\\rp_loading_anim.xml"
+    },
+    {
+        "merged": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\drawable\\em_transfer_chatto_bg.xml",
+        "source": "D:\\workplace\\superwechat\\superwechat\\redpacketlibrary\\res\\drawable\\em_transfer_chatto_bg.xml"
     }
 ]

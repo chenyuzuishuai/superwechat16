@@ -646,7 +646,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         showExceptionDialogFromIntent(intent);
-        boolean isChat = getIntent().getBooleanExtra(I.BACK_MAIN_FROM_CHAT,false);
+        Boolean isChat = intent.getBooleanExtra(I.BACK_MAIN_FROM_CHAT,false);
         L.e(TAG,"isChat="+isChat);
         if (isChat){
             layoutTabhost.setChecked(0);

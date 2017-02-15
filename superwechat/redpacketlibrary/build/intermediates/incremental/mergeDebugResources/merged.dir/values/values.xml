@@ -113,7 +113,7 @@
     <color name="rp_title_red">#e8584d</color>
     <color name="rp_title_transparent_color">#90D3D97A</color>
     <color name="rp_top_red_color">#D24F44</color>
-    <color name="top_bar_normal_bg">#00acff</color>
+    <color name="top_bar_normal_bg">#000000</color>
     <color name="voip_interface_text_color">#bababa</color>
     <declare-styleable name="EaseChatExtendMenu"><attr format="integer" name="numColumns"/></declare-styleable>
     <declare-styleable name="EaseChatMessageList"><attr format="reference" name="msgListMyBubbleBackground"/><attr format="reference" name="msgListOtherBubbleBackground"/><attr format="boolean" name="msgListShowUserAvatar"/><attr format="boolean" name="msgListShowUserNick"/></declare-styleable>
