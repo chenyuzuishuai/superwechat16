@@ -1,4 +1,4 @@
-#Wed Feb 15 16:19:16 CST 2017
+#Wed Feb 15 16:48:12 CST 2017
 base.0=D\:\\workplace\\superwechat\\superwechat\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.1=classes2.dex
 renamed.0=classes.dex
