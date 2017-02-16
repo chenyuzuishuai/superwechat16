@@ -475,11 +475,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
     public void updateUnreadLabel() {
 		int count = getUnreadMsgCountTotal();
         L.e(TAG,"updateUnreadLabel,count="+count);
-		if (count > 0) {
             layoutTabhost.setUnreadCount(0,count);
-        } else {
-		layoutTabhost.setHasNew(0,false);
-        }
     }
 
     /**
