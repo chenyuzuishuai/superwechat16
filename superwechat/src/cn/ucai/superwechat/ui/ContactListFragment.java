@@ -23,7 +23,12 @@ import cn.ucai.superwechat.SuperWeChatHelper.DataSyncListener;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.db.InviteMessgeDao;
 import cn.ucai.superwechat.db.UserDao;
+import cn.ucai.superwechat.domain.Result;
+import cn.ucai.superwechat.net.NetDao;
+import cn.ucai.superwechat.net.OnCompleteListener;
+import cn.ucai.superwechat.utils.L;
 import cn.ucai.superwechat.utils.MFGT;
+import cn.ucai.superwechat.utils.ResultUtils;
 import cn.ucai.superwechat.widget.ContactItemView;
 
 import com.hyphenate.easeui.domain.EaseUser;
@@ -247,6 +252,34 @@ public class ContactListFragment extends EaseContactListFragment {
         pd.setMessage(st1);
         pd.setCanceledOnTouchOutside(false);
         pd.show();
+        NetDao.deleteAPPContact(getContext(), EMClient.getInstance().getCurrentUser(), tobeDeleteUser.getMUserName(), new OnCompleteListener<String>() {
+            @Override
+            public void onSuccess(String s) {
+              if (s!= null){
+                  Result result = ResultUtils.getResultFromJson(s,User.class);
+                  if (result!=null&&result.isRetMsg()){
+                      // remove user from memory and database
+                      UserDao dao = new UserDao(getActivity());
+                      dao.deleteAPPContact(tobeDeleteUser.getMUserName());
+                      SuperWeChatHelper.getInstance().getAPPContactList().remove(tobeDeleteUser.getMUserName());
+                      getActivity().runOnUiThread(new Runnable() {
+                          public void run() {
+                              pd.dismiss();
+                              contactList.remove(tobeDeleteUser);
+                              contactListLayout.refresh();
+
+                          }
+                      });
+
+                  }
+              }
+            }
+
+            @Override
+            public void onError(String error) {
+
+            }
+        });
         new Thread(new Runnable() {
             public void run() {
                 try {

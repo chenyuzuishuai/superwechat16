@@ -112,4 +112,17 @@ public class NetDao {
                 .targetClass(String.class)
                 .execute(listener);
     }
+
+    /**
+     * 删除联系人
+     */
+    public static void deleteAPPContact(Context context ,String username , String cname ,
+                                     OnCompleteListener<String> listener){
+        OkHttpUtils<String> utils = new OkHttpUtils<>(context);
+        utils.setRequestUrl(I.REQUEST_DELETE_CONTACT)
+                .addParam(I.Contact.USER_NAME,username)
+                .addParam(I.Contact.CU_NAME,cname)
+                .targetClass(String.class)
+                .execute(listener);
+    }
 }
