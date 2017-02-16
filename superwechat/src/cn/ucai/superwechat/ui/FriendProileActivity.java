@@ -142,9 +142,8 @@ public class FriendProileActivity extends BaseActivity {
                 MFGT.gotoChat(this,user.getMUserName());
                 break;
             case R.id.btn_send_video:
-                startActivity(new Intent(this, VoiceCallActivity.class)
-                .putExtra("username",user.getMUserName())
-                .putExtra("isComing",false));
+                MFGT.goVoiceCallActivity(this,user.getMUserName());
+
                 break;
         }
     }

@@ -21,6 +21,7 @@ import cn.ucai.superwechat.ui.MainActivity;
 import cn.ucai.superwechat.ui.RegisterActivity;
 import cn.ucai.superwechat.ui.SettingsActivity;
 import cn.ucai.superwechat.ui.UserProfileActivity;
+import cn.ucai.superwechat.ui.VoiceCallActivity;
 
 
 /**
@@ -113,5 +114,11 @@ public class MFGT {
     public static void gotoMain(Activity activity){
         startActivity(activity, new Intent(activity,MainActivity.class)
         .putExtra(I.BACK_MAIN_FROM_CHAT,true));
+    }
+
+    public static void goVoiceCallActivity(Activity activity, String userName) {
+        startActivity(activity,new Intent(activity, VoiceCallActivity.class)
+                .putExtra("username",userName)
+                .putExtra("isComing",false));
     }
 }

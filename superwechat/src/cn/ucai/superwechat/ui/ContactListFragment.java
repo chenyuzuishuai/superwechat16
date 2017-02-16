@@ -283,34 +283,34 @@ public class ContactListFragment extends EaseContactListFragment {
 
             }
         });
-//        new Thread(new Runnable() {
-//            public void run() {
-//                try {
-//                    EMClient.getInstance().contactManager().deleteContact(tobeDeleteUser.getMUserName());
-//                    // remove user from memory and database
-//                    UserDao dao = new UserDao(getActivity());
-//                    dao.deleteContact(tobeDeleteUser.getMUserName());
-//                    SuperWeChatHelper.getInstance().getContactList().remove(tobeDeleteUser.getMUserName());
-//                    getActivity().runOnUiThread(new Runnable() {
-//                        public void run() {
-//                            pd.dismiss();
-//                            contactList.remove(tobeDeleteUser);
-//                            contactListLayout.refresh();
-//
-//                        }
-//                    });
-//                } catch (final Exception e) {
-//                    getActivity().runOnUiThread(new Runnable() {
-//                        public void run() {
-//                            pd.dismiss();
-//                            Toast.makeText(getActivity(), st2 + e.getMessage(), Toast.LENGTH_LONG).show();
-//                        }
-//                    });
-//
-//                }
-//
-//            }
-//        }).start();
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    EMClient.getInstance().contactManager().deleteContact(tobeDeleteUser.getMUserName());
+                    // remove user from memory and database
+                    UserDao dao = new UserDao(getActivity());
+                    dao.deleteContact(tobeDeleteUser.getMUserName());
+                    SuperWeChatHelper.getInstance().getContactList().remove(tobeDeleteUser.getMUserName());
+                    getActivity().runOnUiThread(new Runnable() {
+                        public void run() {
+                            pd.dismiss();
+                            contactList.remove(tobeDeleteUser);
+                            contactListLayout.refresh();
+
+                        }
+                    });
+                } catch (final Exception e) {
+                    getActivity().runOnUiThread(new Runnable() {
+                        public void run() {
+                            pd.dismiss();
+                            Toast.makeText(getActivity(), st2 + e.getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+
+                }
+
+            }
+        }).start();
 
     }
 
