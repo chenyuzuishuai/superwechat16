@@ -26,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hyphenate.chat.EMClient;
+import com.hyphenate.chat.EMGroup;
 import com.hyphenate.chat.EMGroupManager.EMGroupOptions;
 import com.hyphenate.chat.EMGroupManager.EMGroupStyle;
 import cn.ucai.superwechat.R;
@@ -106,7 +107,8 @@ public class NewGroupActivity extends BaseActivity {
 						}else{
 						    option.style = memberCheckbox.isChecked()?EMGroupStyle.EMGroupStylePrivateMemberCanInvite:EMGroupStyle.EMGroupStylePrivateOnlyOwnerInvite;
 						}
-                        EMClient.getInstance().groupManager().createGroup(groupName, desc, members, reason, option);
+                       EMGroup group = EMClient.getInstance().groupManager().createGroup(groupName, desc, members, reason, option);
+						
 						runOnUiThread(new Runnable() {
 							public void run() {
 								progressDialog.dismiss();
