@@ -266,14 +266,15 @@ public class LoginActivity extends BaseActivity {
         MFGT.finish(this);
     }
 
-    @OnClick({R.id.img_back, R.id.btn_login, R.id.btn_register})
+    @OnClick(R.id.btn_login)
+    public void Login(){
+        login();
+    }
+    @OnClick({R.id.img_back,  R.id.btn_register})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.img_back:
                 MFGT.finish(this);
-                break;
-            case R.id.btn_login:
-                login();
                 break;
             case R.id.btn_register:
                 MFGT.gotoRegister(this);

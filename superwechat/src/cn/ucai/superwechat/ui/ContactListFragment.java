@@ -18,6 +18,7 @@ import java.util.Map;
 
 import com.hyphenate.chat.EMClient;
 
+import cn.ucai.superwechat.Constant;
 import cn.ucai.superwechat.SuperWeChatHelper;
 import cn.ucai.superwechat.SuperWeChatHelper.DataSyncListener;
 import cn.ucai.superwechat.R;
@@ -221,6 +222,7 @@ public class ContactListFragment extends EaseContactListFragment {
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
+        L.e(TAG,"onContextItemSelected item="+item);
         if (item.getItemId() == R.id.delete_contact) {
             try {
                 // delete contact
@@ -256,6 +258,7 @@ public class ContactListFragment extends EaseContactListFragment {
             @Override
             public void onSuccess(String s) {
               if (s!= null){
+                  L.e(TAG,"s="+s);
                   Result result = ResultUtils.getResultFromJson(s,User.class);
                   if (result!=null&&result.isRetMsg()){
                       // remove user from memory and database
@@ -267,7 +270,7 @@ public class ContactListFragment extends EaseContactListFragment {
                               pd.dismiss();
                               contactList.remove(tobeDeleteUser);
                               contactListLayout.refresh();
-
+                              getActivity().sendBroadcast(new Intent(Constant.ACTION_CONTACT_CHANAGED));
                           }
                       });
 
@@ -280,34 +283,34 @@ public class ContactListFragment extends EaseContactListFragment {
 
             }
         });
-        new Thread(new Runnable() {
-            public void run() {
-                try {
-                    EMClient.getInstance().contactManager().deleteContact(tobeDeleteUser.getMUserName());
-                    // remove user from memory and database
-                    UserDao dao = new UserDao(getActivity());
-                    dao.deleteContact(tobeDeleteUser.getMUserName());
-                    SuperWeChatHelper.getInstance().getContactList().remove(tobeDeleteUser.getMUserName());
-                    getActivity().runOnUiThread(new Runnable() {
-                        public void run() {
-                            pd.dismiss();
-                            contactList.remove(tobeDeleteUser);
-                            contactListLayout.refresh();
-
-                        }
-                    });
-                } catch (final Exception e) {
-                    getActivity().runOnUiThread(new Runnable() {
-                        public void run() {
-                            pd.dismiss();
-                            Toast.makeText(getActivity(), st2 + e.getMessage(), Toast.LENGTH_LONG).show();
-                        }
-                    });
-
-                }
-
-            }
-        }).start();
+//        new Thread(new Runnable() {
+//            public void run() {
+//                try {
+//                    EMClient.getInstance().contactManager().deleteContact(tobeDeleteUser.getMUserName());
+//                    // remove user from memory and database
+//                    UserDao dao = new UserDao(getActivity());
+//                    dao.deleteContact(tobeDeleteUser.getMUserName());
+//                    SuperWeChatHelper.getInstance().getContactList().remove(tobeDeleteUser.getMUserName());
+//                    getActivity().runOnUiThread(new Runnable() {
+//                        public void run() {
+//                            pd.dismiss();
+//                            contactList.remove(tobeDeleteUser);
+//                            contactListLayout.refresh();
+//
+//                        }
+//                    });
+//                } catch (final Exception e) {
+//                    getActivity().runOnUiThread(new Runnable() {
+//                        public void run() {
+//                            pd.dismiss();
+//                            Toast.makeText(getActivity(), st2 + e.getMessage(), Toast.LENGTH_LONG).show();
+//                        }
+//                    });
+//
+//                }
+//
+//            }
+//        }).start();
 
     }
 
