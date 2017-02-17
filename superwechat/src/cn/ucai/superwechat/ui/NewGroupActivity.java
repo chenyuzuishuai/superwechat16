@@ -33,10 +33,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.baidu.platform.comapi.map.E;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
 import com.hyphenate.chat.EMGroupManager.EMGroupOptions;
 import com.hyphenate.chat.EMGroupManager.EMGroupStyle;
+import com.hyphenate.easeui.domain.Group;
 import com.hyphenate.easeui.utils.EaseImageUtils;
 import com.hyphenate.easeui.widget.EaseAlertDialog;
 import com.hyphenate.exceptions.HyphenateException;
@@ -45,6 +47,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -61,7 +64,7 @@ import cn.ucai.superwechat.utils.ResultUtils;
 public class NewGroupActivity extends BaseActivity {
 
 
-    File file= null;
+    File file = null;
 
     @BindView(R.id.edit_group_name)
     EditText groupNameEditText;
@@ -183,14 +186,21 @@ public class NewGroupActivity extends BaseActivity {
     }
 
 
-    private void createAppGroup(EMGroup group) {
+    private void createAppGroup(final EMGroup group) {
         NetDao.createGroup(this, group, file, new OnCompleteListener<String>() {
             @Override
             public void onSuccess(String s) {
                 if (s != null) {
                     Result result = ResultUtils.getResultFromJson(s, EMGroup.class);
                     if (result != null && result.isRetMsg()) {
-                        createGroupSuccess();
+                        L.e(TAG, "group.getMemberCount=" + group.getMemberCount());
+                        L.e(TAG, "group.getMemberCount=" + group.getMembers());
+                        L.e(TAG, "group.getMemberCount=" + group.getMembers().toString());
+                        if (group.getMemberCount() > 1) {
+                            addGroupMember(group);
+                        } else {
+                            createGroupSuccess();
+                        }
                     } else {
                         progressDialog.dismiss();
                         if (result.getRetCode() == I.MSG_GROUP_HXID_EXISTS) {
@@ -212,6 +222,46 @@ public class NewGroupActivity extends BaseActivity {
         });
     }
 
+    private void addGroupMember(EMGroup group) {
+
+        NetDao.addGroupMembers(this, getGroupMembers(group.getMembers()), group.getGroupId(), new OnCompleteListener<String>() {
+            @Override
+            public void onSuccess(String s) {
+                L.e(TAG,"s="+s);
+                boolean success = false;
+                if (s!=null){
+                  Result result = ResultUtils.getResultFromJson(s, Group.class);
+                if (result!=null&&result.isRetMsg()){
+                    createGroupSuccess();
+                    success =true;
+                }
+                }
+                if (!success){
+                    progressDialog.dismiss();
+                    CommonUtils.showShortToast(R.string.Failed_to_create_groups);
+                }
+            }
+
+            @Override
+            public void onError(String error) {
+                progressDialog.dismiss();
+                CommonUtils.showShortToast(R.string.Failed_to_create_groups);
+            }
+        });
+    }
+
+    private String  getGroupMembers(List<String> members) {
+        String membersStr = "";
+        members.remove(EMClient.getInstance().getCurrentUser());
+        if (members!=null&&members.size()>0){
+            for (String s:members){
+                membersStr += s+",";
+            }
+        }
+        L.e(TAG,"getGroupMembers.s="+membersStr);
+        return membersStr;
+    }
+
     public void back(View view) {
         finish();
     }
@@ -219,7 +269,9 @@ public class NewGroupActivity extends BaseActivity {
     private void createGroupSuccess() {
         runOnUiThread(new Runnable() {
             public void run() {
-                progressDialog.dismiss();
+                if (progressDialog !=null&&progressDialog.isShowing()) {
+                    progressDialog.dismiss();
+                }
                 setResult(RESULT_OK);
                 finish();
             }
@@ -240,7 +292,6 @@ public class NewGroupActivity extends BaseActivity {
     }
 
 
-
     private void saveBitmapFile(Intent picdata) {
         Bundle extras = picdata.getExtras();
         if (extras != null) {
@@ -249,7 +300,7 @@ public class NewGroupActivity extends BaseActivity {
             mIvAvatar.setImageDrawable(drawable);
 
             String imagePath = EaseImageUtils.getImagePath(EMClient.getInstance().getCurrentUser() + I.AVATAR_SUFFIX_JPG);
-             file = new File(imagePath);
+            file = new File(imagePath);
             L.e("filePath=" + file.getAbsolutePath());
             try {
                 BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
