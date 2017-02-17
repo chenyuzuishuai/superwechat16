@@ -48,10 +48,12 @@ import cn.ucai.superwechat.utils.MFGT;
 import cn.ucai.superwechat.utils.PreferenceManager;
 import cn.ucai.superwechat.utils.ResultUtils;
 
+import static cn.ucai.superwechat.I.REQUESTCODE_CUTTING;
+import static cn.ucai.superwechat.I.REQUESTCODE_PICK;
+
 public class UserProfileActivity extends BaseActivity implements OnClickListener {
 
-    private static final int REQUESTCODE_PICK = 1;
-    private static final int REQUESTCODE_CUTTING = 2;
+
     private static final String TAG = UserProfileActivity.class.getSimpleName();
     @BindView(R.id.img_back)
     ImageView imgBack;
@@ -140,7 +142,7 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
                             case 1:
                                 Intent pickIntent = new Intent(Intent.ACTION_PICK, null);
                                 pickIntent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
-                                startActivityForResult(pickIntent, REQUESTCODE_PICK);
+                                startActivityForResult(pickIntent, I.REQUESTCODE_PICK);
                                 break;
                             default:
                                 break;
@@ -228,13 +230,13 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
-            case REQUESTCODE_PICK:
+            case I.REQUESTCODE_PICK:
                 if (data == null || data.getData() == null) {
                     return;
                 }
                 startPhotoZoom(data.getData());
                 break;
-            case REQUESTCODE_CUTTING:
+            case I.REQUESTCODE_CUTTING:
                 if (data != null) {
                     uploadAPPUserAvatar(data);
                 }
@@ -299,6 +301,10 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 
     private void uploadAPPUserAvatar(final Intent picdata){
         File file = saveBitmapFile(picdata);
+        if (file==null){
+            return;
+        }
+        L.e(TAG,"file="+file.getAbsolutePath());
         dialog= ProgressDialog.show(this,getString(R.string.dl_update_photo),getString(R.string.dl_waiting));
         NetDao.uploadAPPUserAvatar(this, EMClient.getInstance().getCurrentUser(), file, new OnCompleteListener<String>() {
             @Override
