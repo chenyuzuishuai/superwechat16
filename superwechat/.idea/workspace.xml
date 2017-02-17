@@ -404,9 +404,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../easeui/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/../easeui/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../easeui/build/outputs/aar/EaseUI-debug.aar" afterPath="$PROJECT_DIR$/../easeui/build/outputs/aar/EaseUI-debug.aar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../easeui/build/outputs/aar/EaseUI-release.aar" afterPath="$PROJECT_DIR$/../easeui/build/outputs/aar/EaseUI-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../easeui/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/../easeui/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../easeui/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/../easeui/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../easeui/build/intermediates/bundles/debug/res/values/values.xml" afterPath="$PROJECT_DIR$/../easeui/build/intermediates/bundles/debug/res/values/values.xml" />
@@ -432,7 +429,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../easeui/src/com/hyphenate/easeui/widget/EaseContactList.java" afterPath="$PROJECT_DIR$/../easeui/src/com/hyphenate/easeui/widget/EaseContactList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../easeui/src/com/hyphenate/easeui/widget/chatrow/EaseChatRow.java" afterPath="$PROJECT_DIR$/../easeui/src/com/hyphenate/easeui/widget/chatrow/EaseChatRow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/ucai/superwechat/net/NetDao.java" afterPath="$PROJECT_DIR$/src/cn/ucai/superwechat/net/NetDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/ucai/superwechat/ui/NewGroupActivity.java" afterPath="$PROJECT_DIR$/src/cn/ucai/superwechat/ui/NewGroupActivity.java" />
     </list>
     <ignored path="superwechat.iws" />
@@ -471,8 +467,8 @@
       <file leaf-file-name="NewGroupActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/ui/NewGroupActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="226" column="71" selection-start-line="226" selection-start-column="71" selection-end-line="226" selection-end-column="71" />
+            <state relative-caret-position="227">
+              <caret line="195" column="43" selection-start-line="195" selection-start-column="43" selection-end-line="195" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3113#3516#0" expanded="true" />
@@ -482,28 +478,28 @@
                 <element signature="e#3728#3763#0" expanded="true" />
                 <element signature="e#4978#5038#0" expanded="true" />
                 <element signature="e#5067#5125#0" expanded="true" />
-                <element signature="e#5347#6999#0" expanded="true" />
+                <element signature="e#5347#7007#0" expanded="true" />
                 <element signature="e#5822#5881#0" expanded="true" />
-                <element signature="e#6668#6954#0" expanded="true" />
-                <element signature="e#6953#6954#0" expanded="true" />
-                <element signature="e#6998#6999#0" expanded="true" />
-                <element signature="e#8261#8293#0" expanded="true" />
-                <element signature="e#8576#8608#0" expanded="true" />
-                <element signature="e#9367#9399#0" expanded="true" />
-                <element signature="e#9590#9622#0" expanded="true" />
-                <element signature="e#10074#10075#0" expanded="true" />
-                <element signature="e#10098#10099#0" expanded="true" />
-                <element signature="e#10163#10436#0" expanded="true" />
-                <element signature="e#10435#10436#0" expanded="true" />
+                <element signature="e#6676#6962#0" expanded="true" />
+                <element signature="e#6961#6962#0" expanded="true" />
+                <element signature="e#7006#7007#0" expanded="true" />
+                <element signature="e#8064#8096#0" expanded="true" />
+                <element signature="e#8379#8411#0" expanded="true" />
+                <element signature="e#9160#9192#0" expanded="true" />
+                <element signature="e#9383#9415#0" expanded="true" />
+                <element signature="e#9783#9784#0" expanded="true" />
+                <element signature="e#9807#9808#0" expanded="true" />
+                <element signature="e#9872#10145#0" expanded="true" />
+                <element signature="e#10144#10145#0" expanded="true" />
                 <element signature="method#startPhotoZoom#0;class#NewGroupActivity#0" expanded="false" />
                 <element signature="method#saveBitmapFile#0;class#NewGroupActivity#0" expanded="false" />
                 <element signature="method#uploadHeadPhoto#0;class#NewGroupActivity#0" expanded="false" />
-                <element signature="e#12018#12048#0" expanded="true" />
-                <element signature="e#12089#12126#0" expanded="true" />
-                <element signature="e#12128#12167#0" expanded="true" />
-                <element signature="e#12186#13148#0" expanded="true" />
-                <element signature="e#12493#12529#0" expanded="true" />
-                <element signature="e#13147#13148#0" expanded="true" />
+                <element signature="e#11727#11757#0" expanded="true" />
+                <element signature="e#11798#11835#0" expanded="true" />
+                <element signature="e#11837#11876#0" expanded="true" />
+                <element signature="e#11895#12857#0" expanded="true" />
+                <element signature="e#12202#12238#0" expanded="true" />
+                <element signature="e#12856#12857#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2985,10 +2981,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="424" />
+    <option name="y" value="27" />
+    <option name="width" value="910" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -3437,7 +3433,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="424" y="27" width="910" height="738" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3457,7 +3453,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1376702" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21411765" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24903226" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -3932,8 +3928,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/ui/NewGroupActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="226" column="71" selection-start-line="226" selection-start-column="71" selection-end-line="226" selection-end-column="71" />
+        <state relative-caret-position="227">
+          <caret line="195" column="43" selection-start-line="195" selection-start-column="43" selection-end-line="195" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3113#3516#0" expanded="true" />
@@ -3943,28 +3939,28 @@
             <element signature="e#3728#3763#0" expanded="true" />
             <element signature="e#4978#5038#0" expanded="true" />
             <element signature="e#5067#5125#0" expanded="true" />
-            <element signature="e#5347#6999#0" expanded="true" />
+            <element signature="e#5347#7007#0" expanded="true" />
             <element signature="e#5822#5881#0" expanded="true" />
-            <element signature="e#6668#6954#0" expanded="true" />
-            <element signature="e#6953#6954#0" expanded="true" />
-            <element signature="e#6998#6999#0" expanded="true" />
-            <element signature="e#8261#8293#0" expanded="true" />
-            <element signature="e#8576#8608#0" expanded="true" />
-            <element signature="e#9367#9399#0" expanded="true" />
-            <element signature="e#9590#9622#0" expanded="true" />
-            <element signature="e#10074#10075#0" expanded="true" />
-            <element signature="e#10098#10099#0" expanded="true" />
-            <element signature="e#10163#10436#0" expanded="true" />
-            <element signature="e#10435#10436#0" expanded="true" />
+            <element signature="e#6676#6962#0" expanded="true" />
+            <element signature="e#6961#6962#0" expanded="true" />
+            <element signature="e#7006#7007#0" expanded="true" />
+            <element signature="e#8064#8096#0" expanded="true" />
+            <element signature="e#8379#8411#0" expanded="true" />
+            <element signature="e#9160#9192#0" expanded="true" />
+            <element signature="e#9383#9415#0" expanded="true" />
+            <element signature="e#9783#9784#0" expanded="true" />
+            <element signature="e#9807#9808#0" expanded="true" />
+            <element signature="e#9872#10145#0" expanded="true" />
+            <element signature="e#10144#10145#0" expanded="true" />
             <element signature="method#startPhotoZoom#0;class#NewGroupActivity#0" expanded="false" />
             <element signature="method#saveBitmapFile#0;class#NewGroupActivity#0" expanded="false" />
             <element signature="method#uploadHeadPhoto#0;class#NewGroupActivity#0" expanded="false" />
-            <element signature="e#12018#12048#0" expanded="true" />
-            <element signature="e#12089#12126#0" expanded="true" />
-            <element signature="e#12128#12167#0" expanded="true" />
-            <element signature="e#12186#13148#0" expanded="true" />
-            <element signature="e#12493#12529#0" expanded="true" />
-            <element signature="e#13147#13148#0" expanded="true" />
+            <element signature="e#11727#11757#0" expanded="true" />
+            <element signature="e#11798#11835#0" expanded="true" />
+            <element signature="e#11837#11876#0" expanded="true" />
+            <element signature="e#11895#12857#0" expanded="true" />
+            <element signature="e#12202#12238#0" expanded="true" />
+            <element signature="e#12856#12857#0" expanded="true" />
           </folding>
         </state>
       </provider>
