@@ -13,6 +13,7 @@ import cn.ucai.superwechat.utils.MD5;
 import cn.ucai.superwechat.utils.OkHttpUtils;
 
 import static android.R.attr.id;
+import static android.webkit.WebSettings.PluginState.ON;
 
 
 /**
@@ -181,6 +182,17 @@ public class NetDao {
         utils.setRequestUrl(I.REQUEST_UPDATE_GROUP_NAME)
                 .addParam(I.Group.HX_ID,hxid)
                 .addParam(I.Group.NAME,groupName)
+                .targetClass(String.class)
+                .execute(listener);
+    }
+
+    /**
+     * 退出群组操作
+     */
+    public static void deleteGroup(Context context,String hxid,OnCompleteListener<String> listener){
+        OkHttpUtils<String> utils = new OkHttpUtils<>(context);
+        utils.setRequestUrl(I.REQUEST_DELETE_GROUP)
+                .addParam(I.Group.HX_ID,hxid)
                 .targetClass(String.class)
                 .execute(listener);
     }
