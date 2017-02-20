@@ -13,6 +13,7 @@
  */
 package cn.ucai.superwechat.ui;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -22,8 +23,11 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Looper;
+import android.os.MessageQueue;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -220,7 +224,6 @@ public class NewGroupActivity extends BaseActivity {
     }
 
     private void addGroupMember(String hxid,String[] members) {
-
         NetDao.addGroupMembers(this, getGroupMembers(members), hxid, new OnCompleteListener<String>() {
             @Override
             public void onSuccess(String s) {
@@ -272,6 +275,7 @@ public class NewGroupActivity extends BaseActivity {
                 finish();
             }
         });
+
     }
 
     public void startPhotoZoom(Uri uri) {

@@ -108,7 +108,7 @@ public class FriendProileActivity extends BaseActivity {
     private void showUserInfo() {
         tvUserinfoNick.setText(user.getMUserNick());
         tvUserinfoName.setText("微信号 " + user.getMUserName());
-        EaseUserUtils.setAPPUserAvatarByPath(this, user.getAvatar(), profileImage);
+        EaseUserUtils.setAPPUserAvatarByPath(this, user.getAvatar(), profileImage,null);
         if (isFriend()){
             btnSendMsg.setVisibility(View.VISIBLE);
             btnSendVideo.setVisibility(View.VISIBLE);

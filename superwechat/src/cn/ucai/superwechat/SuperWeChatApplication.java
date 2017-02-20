@@ -37,7 +37,7 @@ public class SuperWeChatApplication extends Application {
 		super.onCreate();
         applicationContext = this;
         instance = this;
-        
+
         //init demo helper
         SuperWeChatHelper.getInstance().init(applicationContext);
 		//red packet code : 初始化红包上下文，开启日志输出开关
