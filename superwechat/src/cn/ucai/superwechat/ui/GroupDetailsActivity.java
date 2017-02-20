@@ -44,6 +44,7 @@ import com.hyphenate.chat.EMPushConfigs;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.net.NetDao;
 import cn.ucai.superwechat.net.OnCompleteListener;
+import cn.ucai.superwechat.utils.L;
 import cn.ucai.superwechat.utils.MFGT;
 
 import com.hyphenate.easeui.utils.EaseUserUtils;
@@ -423,6 +424,17 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 							progressDialog.dismiss();
 						}
 					});
+					NetDao.addGroupMembers(getContext(), getGroupMembers(newmembers), groupId, new OnCompleteListener<String>() {
+						@Override
+						public void onSuccess(String s) {
+							Log.e(TAG, "addGroupMembers: s="+s );
+						}
+
+						@Override
+						public void onError(String error) {
+
+						}
+					});
 				} catch (final Exception e) {
 					runOnUiThread(new Runnable() {
 						public void run() {
@@ -475,7 +487,16 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 		}
 
 	}
-
+	private String  getGroupMembers(String[] members) {
+		String membersStr = "";
+		if (members.length>0){
+			for (String s:members){
+				membersStr += s+",";
+			}
+		}
+		L.e(TAG,"getGroupMembers.s="+membersStr);
+		return membersStr;
+	}
 	private void toggleBlockOfflineMsg() {
 		if(EMClient.getInstance().pushManager().getPushConfigs() == null){
 			return;
