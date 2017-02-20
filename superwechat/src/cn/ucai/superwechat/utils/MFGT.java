@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 
+import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.domain.User;
 
 import java.util.ArrayList;
@@ -95,9 +96,13 @@ public class MFGT {
 //        intent.setClass(activity,FriendProileActivity.class);
 //        intent.putExtra(I.User.USER_NAME,user);
 //        startActivity(activity,intent);
-        startActivity(activity, new Intent(activity,FriendProileActivity.class)
-                .putExtra(I.User.USER_NAME,username)
-        );
+        if (username.equals(EMClient.getInstance().getCurrentUser())){
+            gotoUserProfile(activity);
+        }else {
+            startActivity(activity, new Intent(activity,FriendProileActivity.class)
+                    .putExtra(I.User.USER_NAME,username)
+            );
+        }
     }
 
     //前往发送好友请求界面
