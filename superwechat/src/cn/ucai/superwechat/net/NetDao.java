@@ -169,7 +169,19 @@ public class NetDao {
         utils.setRequestUrl(I.REQUEST_DELETE_GROUP_MEMBER)
                 .addParam(I.Member.GROUP_HX_ID,hxid)
                 .addParam(I.Member.USER_NAME,username)
-                .targetClass(String .class)
+                .targetClass(String.class)
+                .execute(listener);
+    }
+
+    /**
+     * 更新群组名称
+     */
+    public static void updateGroupName(Context context,String hxid,String groupName,OnCompleteListener<String> listener){
+        OkHttpUtils<String> utils = new OkHttpUtils<>(context);
+        utils.setRequestUrl(I.REQUEST_UPDATE_GROUP_NAME)
+                .addParam(I.Group.HX_ID,hxid)
+                .addParam(I.Group.NAME,groupName)
+                .targetClass(String.class)
                 .execute(listener);
     }
 }
